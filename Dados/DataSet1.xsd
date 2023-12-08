@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Locadora_JogosConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Locadora_JogosConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Projeto_LocadoraJogos.Properties.Settings.GlobalReference.Default.Locadora_JogosConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Clientes_JogosTableAdapter" GeneratorDataComponentClassName="Clientes_JogosTableAdapter" Name="Clientes_Jogos" UserDataComponentName="Clientes_JogosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Locadora_JogosConnectionString (Settings)" DbObjectName="Locadora_Jogos.dbo.Cliente" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DISTINCT Jogo_locado
+FROM            Cliente</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Jogo_locado" DataSetColumn="Jogo_locado" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Clientes_Jogos" msprop:Generator_RowEvHandlerName="Clientes_JogosRowChangeEventHandler" msprop:Generator_RowDeletedName="Clientes_JogosRowDeleted" msprop:Generator_RowDeletingName="Clientes_JogosRowDeleting" msprop:Generator_RowEvArgName="Clientes_JogosRowChangeEvent" msprop:Generator_TablePropName="Clientes_Jogos" msprop:Generator_RowChangedName="Clientes_JogosRowChanged" msprop:Generator_RowChangingName="Clientes_JogosRowChanging" msprop:Generator_TableClassName="Clientes_JogosDataTable" msprop:Generator_RowClassName="Clientes_JogosRow" msprop:Generator_TableVarName="tableClientes_Jogos" msprop:Generator_UserTableName="Clientes_Jogos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Jogo_locado" msprop:Generator_ColumnPropNameInRow="Jogo_locado" msprop:Generator_ColumnPropNameInTable="Jogo_locadoColumn" msprop:Generator_ColumnVarNameInTable="columnJogo_locado" msprop:Generator_UserColumnName="Jogo_locado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
